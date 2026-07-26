@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 //Get route
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 //parameters using routes
 Route::get('/dashboard', function () {
