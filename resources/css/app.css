@@ -11,43 +11,59 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 :root{
-    --color-background1: hsl(0 0% 0%);
-    --color-background2: hsl(260 15% 8%);
-    --color-background3: hsl(260 10% 14%);
-    --color-border: hsl(260 10% 22%);
+    --color-bg-dark: hsl(225 35% 7%);
+    --color-bg: hsl(224 31% 10%);
+    --color-bg-light: hsl(225 30% 13%);
+    --color-border: hsl(222 18% 35%);
 
-    --color-text1: hsl(0 0% 100%);
-    --color-text2: hsl(260 0 60%);
-    --color-text3: black;
+    --glow-primary: hsl(247 100% 71% / 0.14);
 
-    --color-primary: hsl(255 92% 76%);
-    --color-secondary: hsl(260 100% 62%);
+    --color-text: hsl(220 35% 93%);
+    --color-text-muted: hsl(219 13% 59%);
+    --color-text-diff: hsl(226 30% 16%);
 
-    --color-danger: hsl(0 84% 60%);
-    --color-warning: hsl(38 92% 55%);
-    --color-succes: hsl(142 71% 45%);
-    --color-info: hsl(199 89% 55%);
+    --color-primary: hsl(247 100% 71%);
+    --color-secondary: hsl(248 100% 78%);
+
+    --color-danger: hsl(350 89% 60%);
+    --color-warning: hsl(37 91% 55%);
+    --color-succes: hsl(156 85% 43%);
+    --color-info: hsl(189 94% 43%);
 }
 
 .lightmode{
-    --color-background1: hsl(0 0% 100%);
-    --color-background2: hsl(260 20% 97%);
-    --color-background3: hsl(260 15% 93%);
-    --color-border: hsl(260 10% 85%);
+    --color-bg-dark: hsl(225 20% 90%);
+    --color-bg: hsl(225 25% 95%);
+    --color-bg-light: hsl(225 30% 99%);
+    --color-border: hsl(222 15% 70%);
 
-    --color-text1: hsl(260 15% 8%);
-    --color-text2: hsl(260 8% 40%);
-    --color-text3: white;
+    --glow-primary: hsl(247 70% 60% / 0.07);
 
-    --color-primary: hsl(255 70% 65%);
-    --color-secondary: hsl(260 100% 62%);
+    --color-text: hsl(225 30% 8%);
+    --color-text-muted: hsl(219 13% 35%);
+    --color-text-diff: hsl(225 25% 93%);
 
-    --color-danger: hsl(0 72% 51%);
-    --color-warning: hsl(38 92% 50%);
-    --color-succes: hsl(142 71% 40%);
-    --color-info: hsl(199 89% 48%);
+    --color-primary: hsl(247 70% 60%);
+    --color-secondary: hsl(248 75% 65%);
+
+    --color-danger: hsl(350 75% 50%);
+    --color-warning: hsl(37 85% 48%);
+    --color-succes: hsl(156 75% 35%);
+    --color-info: hsl(189 85% 40%);
 }
 
+/*=======================
+          TESTS
+========================*/
+
+.hero-glow {
+    background: radial-gradient(ellipse at center top, var(--glow-primary) 0%, transparent 70%);
+}
+
+
+/*=======================
+          BASES
+========================*/
 
 *{
     margin: 0;
@@ -57,8 +73,8 @@
 }
 
 body {
-    background-color: var(--color-background1);
-    color: var(--color-text1);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
     font-family: 'Lato', ui-sans-serif, system-ui, sans-serif;
     font-weight: 400; /* charge Lato-Regular */
     display: flex;
@@ -83,7 +99,7 @@ em, .italic {
 }
 
 a{
-    color: var(--color-text1);
+    color: var(--color-text);
 }
 
 /*=======================
@@ -93,7 +109,7 @@ a{
 @font-face {
     font-family: 'Lato';
     src: url('../fonts/Lato-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -101,7 +117,7 @@ a{
 @font-face {
     font-family: 'Lato';
     src: url('../fonts/Lato-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -141,6 +157,11 @@ a{
     height: 40px;
 }
 
+.logosmall{
+    width: 20px;
+    height: 20px;
+}
+
 .icon{
     width: 10px;
     height: 10px;
@@ -162,15 +183,15 @@ a{
 .btn-log{
     padding: 15px;
     margin-left: 15px;
-    background: var(--color-background1);
-    color: var(--color-text2);
+    background: var(--color-bg-dark);
+    color: var(--color-text-muted);
     border: 1px solid;
     border-radius: 10px;
 }
 
 .btn-log:hover{
-    color: var(--color-text1);
-    border-color: var(--color-text1);
+    color: var(--color-text);
+    border-color: var(--color-text);
 }
 
 
@@ -179,19 +200,40 @@ a{
     padding: 15px;
     margin-left: 15px;
     background: var(--color-primary);
-    color: var(--color-text1);
-    border: 1px solid;
+    color: var(--color-text);
+    border: none;
     border-radius: 10px;
 }
 
 .btn-sign:hover{
-    color: var(--color-text1);
+    color: var(--color-text);
     background: var(--color-secondary);
 }
 
-/*====================
-        NAVBAR
-=====================*/
+/*=================================
+        CARD PRESENTATION
+==================================*/
+
+.card{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.card-presentation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+/*=========================
+        NAVBAR Home
+==========================*/
 
 .navbar{
     display: grid;
@@ -234,11 +276,11 @@ a{
 
 .navbar-center li a{
     padding: 10px;
-    color: var(--color-text2);
+    color: var(--color-text-muted);
 }
 
 .navbar-center li a:hover{
-    color: var(--color-text1);
+    color: var(--color-text);
 }
 
 .navbar-center li:not(:last-child)::after{
@@ -249,7 +291,7 @@ a{
     transform: translateY(-50%);
     width: 1px;
     height: 14px;
-    background: var(--color-text2);
+    background: var(--color-text-muted);
 }
 
 
@@ -262,3 +304,68 @@ a{
 .navbar-center a{
     text-decoration: none;
 }
+/*===========================
+        POSITIONS
+===========================*/
+
+.centre{
+    text-align: center;
+    margin: 40px auto 20px auto;
+}
+
+/*===========================
+           COLORS
+===========================*/
+.secondary{
+    color: var(--color-secondary);
+}
+/*===========================
+        TITLES
+===========================*/
+
+h1{
+    font-size: 75px;
+}
+
+/*===========================
+        MISCELANIOUS
+===========================*/
+
+.titre-centre{
+    display: flex;
+    margin: 90px auto 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+    justify-content: center;
+    background: var(--color-primary);
+}
+
+.text-muted{
+    color: var(--color-text-muted);
+    padding: 30px;
+    font-size: 17px;
+}
+
+.btngrp-main{
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bi{
+    margin-left: 5px;
+}
+
+/*===========================
+           FOOTER
+===========================*/
+
+.footer{
+
+}
+
+

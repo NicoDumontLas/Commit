@@ -33,12 +33,12 @@
         </nav>
     </header>
 
-    <main>
+    <main class="hero-glow">
         @yield('main')
     </main>
 
-    <footer>
-        <p>&copy; 2026 COMMIT. All rights reserved.</p>
+    <footer class="footer">
+        <p><img src="{{ asset('images/Commit-Logo.png') }}" alt="COMMIT Logo" class="logosmall">&copy; 2026 COMMIT. All rights reserved.</p>
     </footer>
 </body>
 </html>
