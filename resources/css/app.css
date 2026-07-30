@@ -56,9 +56,7 @@
           TESTS
 ========================*/
 
-.hero-glow {
-    background: radial-gradient(ellipse at center top, var(--glow-primary) 0%, transparent 70%);
-}
+
 
 
 /*=======================
@@ -70,6 +68,10 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -101,6 +103,148 @@ em, .italic {
 a{
     color: var(--color-text);
 }
+
+/*=======================
+          FORM
+========================*/
+
+.reg-form-header{
+    padding-bottom: 40px;
+}
+
+.reg-form-header p{
+    margin-top: 10px;
+    color: var(--color-text-muted);
+}
+
+.reg-form-main input{
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    padding: 15px;
+    margin: 5px 10px 10px 10px;
+    border-radius: 10px;
+    color: var(--color-text);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-bg) inset !important;
+    -webkit-text-fill-color: var(--color-text-muted) !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.reg-form-main input:focus{
+    color: var(--color-text);
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-secondary);
+    outline: var(--color-secondary);
+}
+
+.reg-form-main button{
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-form-main label{
+    color: var(--color-text-muted);
+}
+
+.reg-form-footer{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.reg-form-footer p{
+    color: var(--color-text-muted);
+}
+
+.reg-form-footer a{
+    color: var(--color-secondary);
+}
+
+.formflex{
+    display: flex;
+}
+
+.formflex-left,
+.formflex-right,
+.reg-form-mail,
+.reg-form-pass{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.log-form-header{
+    padding-bottom: 40px;
+}
+
+.log-form-header p{
+    margin-top: 10px;
+    color: var(--color-text-muted);
+}
+
+.log-form-main input{
+    width: 90%;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    padding: 15px;
+    margin: 5px 0 15px 0;
+    border-radius: 10px;
+    color: var(--color-text);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-bg) inset !important;
+    -webkit-text-fill-color: var(--color-text-muted) !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.log-form-main input:focus{
+    color: var(--color-text-muted);
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-secondary);
+    outline: none;
+    -webkit-text-fill-color: var(--color-text-muted) !important;
+}
+
+.log-form-main button{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.log-form-main label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text-muted);
+}
+
+.log-form-mail,
+.log-form-pass{
+    margin-bottom: 10px;
+}
+
+.log-form-footer{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.log-form-footer p{
+    color: var(--color-text-muted);
+}
+
+.log-form-footer a{
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.log-form-footer a:hover{
+    text-decoration: underline;
+}
+
 
 /*=======================
           FONTS
@@ -155,6 +299,10 @@ a{
 .logo{
     width: 40px;
     height: 40px;
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--color-text);
 }
 
 .logosmall{
@@ -169,13 +317,48 @@ a{
     padding-left: 10px;
 }
 
+.icon-presentation{
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.icp1{
+    background: #1a2245;
+    width: 22px;
+    height: 22px;
+}
+.icp2{
+    background: #12333d;
+    width: 22px;
+    height: 22px;
+}
+.icp3{
+    background: #3c2d25;
+    width: 22px;
+    height: 22px;
+}
+.icp4{
+    background: #3a1c2d;
+    width: 22px;
+    height: 22px;
+}
+.icp5{
+    background: #10302d;
+    width: 22px;
+    height: 22px;
+}
+.icp6{
+    background: #7c6aff;
+    width: 22px;
+    height: 22px;
+}
+
 /*=======================
         BOUTONS
 ========================*/
 
 .btntoggle-darkmode{
-    border: 1px solid;
-    border-color: white;
+    border: 1px solid var(--color-border);
     width: 30px;
     height: 30px;
 }
@@ -211,17 +394,58 @@ a{
 }
 
 /*=================================
+        CARD LOGIN
+==================================*/
+
+.card-log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-bg);
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+}
+
+.card-log:hover{
+    background: var(--color-bg-light);
+}
+
+/*=================================
         CARD PRESENTATION
 ==================================*/
 
-.card{
-    border: 1px solid;
+.card-pres{
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
+    text-align: justify;
+    background: var(--color-bg);
 }
 
-.card-presentation{
+.card-pres:hover{
+    background: var(--color-bg-light);
+}
+
+.card-pres h4{
+    color: var(--color-text);
+}
+
+.card-pres p{
+    color: var(--color-text-muted);
+}
+
+.card-pres-secondary{
+    background: #151c3e;
+    color: var(--color-secondary);
+}
+
+.card-pres-presentation{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -229,6 +453,53 @@ a{
     margin: auto;
 }
 
+
+/*==============================
+        PRESENTATION PART
+==============================*/
+
+.p3{
+    padding: 200px 0 150px 0 ;
+    border-top: 1px solid var(--color-border);
+}
+
+
+.pf{
+    padding: 10px;
+    margin: 40px;
+}
+
+/*=====================================
+           NUMBER PRESENTATION
+======================================*/
+.num-presentation{
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+}
+
+.num-card{
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+.num-card:hover{
+    background: var(--color-bg-light);
+}
+
+.np{
+    align-content: center;
+    margin: 10px auto;
+    background: #151C3E;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    width: 30px;
+    height: 30px;
+}
 
 
 /*=========================
@@ -242,6 +513,10 @@ a{
     width: 100%;
     border-bottom: 0.1px solid;
     border-color: var(--color-border);
+}
+
+.navbar img{
+    margin-right: 15px;
 }
 
 .navbar-left{
@@ -319,12 +594,21 @@ a{
 .secondary{
     color: var(--color-secondary);
 }
+
+.hero-glow {
+    background: radial-gradient(ellipse at center top, var(--glow-primary) 0%, transparent 70%);
+}
+
 /*===========================
         TITLES
 ===========================*/
 
 h1{
     font-size: 75px;
+}
+
+h2{
+    font-size: 35px;
 }
 
 /*===========================
@@ -361,11 +645,97 @@ h1{
 }
 
 /*===========================
+           AUTH
+===========================*/
+
+.auth-form{
+    width: 100%;
+    max-width: 450px; /* ou la valeur que tu souhaites */
+    margin: 0 auto;
+}
+
+.auth-layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+.auth-aside{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border-right: 1px solid var(--color-border);
+    width: 30%;
+    background: var(--color-bg);
+}
+
+.auth-form-side{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.auth-head{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.auth-main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.auth-main h1{
+    font-size: 55px;
+}
+
+.auth-main p{
+    margin-top: 30px;
+    color: var(--color-text-muted);
+    font-size: 23px;
+}
+
+.auth-commit{
+    border: 1px solid var(--color-border);
+    padding: 20px 20px 20px 20px;
+    margin: auto auto 30px auto;
+    width: 60%;
+    border-radius: 10px;
+    background: var(--color-bg-light);
+}
+
+/*===========================
            FOOTER
 ===========================*/
 
 .footer{
+    padding: 30px;
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 5px;
+    align-items: center;
+    color: var(--color-text-muted);
+}
 
+.footer-left{
+    justify-self: start;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-center{
+    align-items: center;
+}
+
+.footer-right{
+    justify-self: end;
 }
 
 

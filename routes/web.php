@@ -8,22 +8,13 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-//parameters using routes
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-
-//named routes
-Route::get('/register', function () {
-    return view('register');
-})->name('registerpage');
-
-//named routes
 Route::get('/login', function () {
-    return view('Auth.login');
-})->name('loginpage');
+    return view('auth.login');
+})->name('login');
 
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
 
 
 //post route example

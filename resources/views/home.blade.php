@@ -10,76 +10,137 @@
         <p class="">Conçu pour les étudiants de tout curcus</p>
     </div>
     <div class="centre section">
-        <div>
-            <h1 class="">Centralise ta scolarité.</h1>
-            <h1 class="secondary">Avance avec méthode.</h1>
-        </div>
-        <div>
-            <p class="text-muted">COMMIT remplace post-its, fichiers éparpillés , idées et tableurs bricolés. <br> Matières, projets, deadlines et objectifs, tout en une seule interface!</p>
-        </div>
-        <div class="btngrp-main">
-            <button class="btn-sign">Crée mon compte <i class="bi bi-arrow-right"></i></button>
-            <button class="btn-log">Se connecter</button>
-        </div>
+        <div class="part">
+            <div>
+                <h1 class="">Centralise ta scolarité.</h1>
+                <h1 class="secondary">Avance avec méthode.</h1>
+            </div>
+            <div>
+                <p class="text-muted">COMMIT remplace post-its, fichiers éparpillés , idées et tableurs bricolés. <br> Matières, projets, deadlines et objectifs, tout en une seule interface!</p>
+            </div>
+            <div class="btngrp-main">
+                <br>
+                <a href="{{ route('register') }}" class="btn-sign">Crée mon compte <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('login') }}" class="btn-log">Se connecter</a>
+                <br><br><br>
+            </div>
 
-        <div>
-            <img src="{{ asset('images/TempAppPage2.png') }}" alt="COMMIT template page" class="template-page">
+            <div>
+                <img src="{{ asset('images/TempAppPage2.png') }}" alt="COMMIT template page" class="template-page">
+            </div>
         </div>
 
         <br><br><br>
 
-        <div>
+        <div class="part" id="fonctionalites">
+            <br><br><br><br><br><br>
             <h2>Tout ce dont tu as besoin</h2>
             <p class="text-muted" >5 modules conçus pour couvrir tous les aspects de ta vie étudiante.</p>
-            <div class="card-presentation">
-                <div class="card">
+            <div class="card-pres-presentation">
+                <div class="card-pres">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.07 -1.07 30 30" id="Dashboard-3--Streamline-Core" height="30" width="30">
+                            <g id="dashboard-3--app-application-dashboard-home-layout-vertical">
+                                <path id="Vector" stroke="#7c6aff" stroke-linecap="round" stroke-linejoin="round" d="M25.87 12.935H17.91c-0.5495186 0 -0.995 0.4454814 -0.995 0.995v11.94c0 0.549439 0.4454814 0.995 0.995 0.995h7.96c0.549439 0 0.995 -0.445561 0.995 -0.995V13.93c0 -0.5495186 -0.445561 -0.995 -0.995 -0.995Z" stroke-width="2.14"></path>
+                                <path id="Vector_2" stroke="#7c6aff" stroke-linecap="round" stroke-linejoin="round" d="M25.87 0.995H17.91c-0.5495186 0 -0.995 0.44547742 -0.995 0.995v3.9998999999999993c0 0.5495186 0.4454814 0.995 0.995 0.995h7.96c0.549439 0 0.995 -0.4454814 0.995 -0.995V1.99c0 -0.54952258 -0.445561 -0.995 -0.995 -0.995Z" stroke-width="2.14"></path>
+                                <path id="Vector_3" stroke="#7c6aff" stroke-linecap="round" stroke-linejoin="round" d="M9.95 0.995H1.99C1.44047742 0.995 0.995 1.44047742 0.995 1.99v11.94c0 0.5495186 0.44547742 0.995 0.995 0.995h7.96c0.5495186 0 0.995 -0.4454814 0.995 -0.995V1.99c0 -0.54952258 -0.4454814 -0.995 -0.995 -0.995Z" stroke-width="2.14"></path>
+                                <path id="Vector_4" stroke="#7c6aff" stroke-linecap="round" stroke-linejoin="round" d="M9.95 20.8751H1.99c-0.54952258 0 -0.995 0.445362 -0.995 0.995V25.87c0 0.549439 0.44547742 0.995 0.995 0.995h7.96c0.5495186 0 0.995 -0.445561 0.995 -0.995v-3.9998999999999993c0 -0.549638 -0.4454814 -0.995 -0.995 -0.995Z" stroke-width="2.14"></path>
+                            </g>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Dashboard centralisé</h4>
+                    <p>Vue d'ensemble de ta scolarité : deadlines urgentes, projets en cours, notions à réviser, tout en un coup d'œil.</p>
                 </div>
-                <div class="card">
+                <div class="card-pres">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.07 -1.07 30 30" id="Open-Book--Streamline-Core" height="30" width="30">
+                            <g id="open-book--content-books-book-open">
+                                <path id="Vector" stroke="#06b3d0" stroke-linecap="round" stroke-linejoin="round" d="M13.9300398 26.864801c-2.9148724 -3.209273 -6.8679079000000005 -5.287828 -11.1639 -5.870500000000001 -0.4889828 -0.054127999999999996 -0.94059141 -0.287555 -1.26766383 -0.654909 -0.32707242000000003 -0.367553 -0.50642316 -0.8431829 -0.50344015 -1.3351308v-16.0195c-0.00001791 -0.2874356 0.06223128 -0.5714682999999999 0.18246708 -0.8325563C1.29773671 1.8911308299999998 1.47310347 1.65919434 1.6915358200000001 1.4723592099999998 1.9061215 1.288923 2.1572794 1.15324281 2.4283373 1.0743293600000001c0.271038 -0.07891345000000001 0.5557871 -0.09925323999999999 0.8353025000000001 -0.059670150000000005 4.1079371 0.68178793 7.865912799999999 2.72904819 10.666400000000001 5.81080199V26.864801Z" stroke-width="2.14"></path>
+                                <path id="Vector_2" stroke="#06b3d0" stroke-linecap="round" stroke-linejoin="round" d="M13.93 26.864801c2.9148724 -3.209273 6.867888 -5.287828 11.1639 -5.870500000000001 0.488943 -0.054127999999999996 0.940673 -0.287555 1.26763 -0.654909 0.327156 -0.367553 0.506455 -0.8431829 0.50347 -1.3351308v-16.0195c0 -0.2874356 -0.062287 -0.5714682999999999 -0.182483 -0.8325563 -0.120196 -0.26107407 -0.29551499999999997 -0.49301056 -0.514017 -0.6798456900000001 -0.21452200000000002 -0.18343621 -0.46566 -0.3191164 -0.736698 -0.39802985 -0.271237 -0.07891345000000001 -0.5558069999999999 -0.09925323999999999 -0.835402 -0.059670150000000005C20.488443 1.6964471399999999 16.7304872 3.7437074 13.93 6.8254611999999995V26.864801Z" stroke-width="2.14"></path>
+                            </g>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Matières & Notions</h4>
+                    <p>Suis ta progression notion par notion. Trois états : À voir -> En cours -> Maîtrisé. Organise par sections et attache des ressources.</p>
                 </div>
-                <div class="card">
+                <div class="card-pres">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp3" xmlns="http://www.w3.org/2000/svg" viewBox="-1.25 -1.25 30 30" fill="none" stroke="#f5a623" stroke-linecap="round" stroke-linejoin="round" id="Folder-Kanban--Streamline-Lucide" height="30" width="30">
+                            <path d="M4.583333333333333 22.916666666666664h18.333333333333332a2.2916666666666665 2.2916666666666665 0 0 0 2.2916666666666665 -2.2916666666666665V9.166666666666666a2.2916666666666665 2.2916666666666665 0 0 0 -2.2916666666666665 -2.2916666666666665h-9.086458333333333a2.2916666666666665 2.2916666666666665 0 0 1 -1.9020833333333331 -1.03125l-0.9395833333333332 -1.3749999999999998A2.2916666666666665 2.2916666666666665 0 0 0 9.086458333333333 3.4375H4.583333333333333a2.2916666666666665 2.2916666666666665 0 0 0 -2.2916666666666665 2.2916666666666665v14.895833333333332c0 1.2604166666666667 1.03125 2.2916666666666665 2.2916666666666665 2.2916666666666665Z" stroke-width="2.5"></path>
+                            <path d="M9.166666666666666 11.458333333333332v4.583333333333333" stroke-width="2.5"></path>
+                            <path d="M13.75 11.458333333333332v2.2916666666666665" stroke-width="2.5"></path>
+                            <path d="M18.333333333333332 11.458333333333332v6.875" stroke-width="2.5"></path>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Projets & Tâches</h4>
+                    <p>Gère tes projets avec un tableau kanban. L'avancement se recalcule automatiquement à chaque tâche terminée.</p>
                 </div>
-                <div class="card">
+                <div class="card-pres">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp4" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" id="Calendar-Alt--Streamline-Unicons" height="30" width="30">
+                            <path fill="#f43f5e" d="M15 23.75c0.24725 0 0.488875 -0.07325 0.6945 -0.210625 0.2055 -0.137375 0.36575 -0.332625 0.46037500000000003 -0.5609999999999999 0.094625 -0.228375 0.11937500000000001 -0.47974999999999995 0.071125 -0.72225s-0.16725 -0.46524999999999994 -0.342125 -0.64c-0.17475000000000002 -0.174875 -0.3975 -0.293875 -0.64 -0.342125 -0.2425 -0.04825 -0.493875 -0.0235 -0.72225 0.071125 -0.228375 0.094625 -0.423625 0.254875 -0.5609999999999999 0.46037500000000003 -0.137375 0.205625 -0.210625 0.44725000000000004 -0.210625 0.6945 0 0.3315 0.13174999999999998 0.6495 0.366125 0.883875S14.6685 23.75 15 23.75Zm6.25 0c0.24725 0 0.488875 -0.07325 0.6945 -0.210625 0.2055 -0.137375 0.36575 -0.332625 0.46037500000000003 -0.5609999999999999 0.094625 -0.228375 0.11937500000000001 -0.47974999999999995 0.071125 -0.72225s-0.16725 -0.46524999999999994 -0.342125 -0.64c-0.17475000000000002 -0.174875 -0.3975 -0.293875 -0.64 -0.342125 -0.2425 -0.04825 -0.493875 -0.0235 -0.72225 0.071125 -0.228375 0.094625 -0.423625 0.254875 -0.5609999999999999 0.46037500000000003 -0.137375 0.205625 -0.210625 0.44725000000000004 -0.210625 0.6945 0 0.3315 0.13174999999999998 0.6495 0.366125 0.883875S20.9185 23.75 21.25 23.75Zm0 -5c0.24725 0 0.488875 -0.07325 0.6945 -0.210625 0.2055 -0.137375 0.36575 -0.332625 0.46037500000000003 -0.5609999999999999 0.094625 -0.228375 0.11937500000000001 -0.47974999999999995 0.071125 -0.72225s-0.16725 -0.46524999999999994 -0.342125 -0.64c-0.17475000000000002 -0.174875 -0.3975 -0.293875 -0.64 -0.342125 -0.2425 -0.04825 -0.493875 -0.0235 -0.72225 0.071125 -0.228375 0.094625 -0.423625 0.254875 -0.5609999999999999 0.46037500000000003 -0.137375 0.205625 -0.210625 0.44725000000000004 -0.210625 0.6945 0 0.3315 0.13174999999999998 0.6495 0.366125 0.883875S20.9185 18.75 21.25 18.75Zm-6.25 0c0.24725 0 0.488875 -0.07325 0.6945 -0.210625 0.2055 -0.137375 0.36575 -0.332625 0.46037500000000003 -0.5609999999999999 0.094625 -0.228375 0.11937500000000001 -0.47974999999999995 0.071125 -0.72225s-0.16725 -0.46524999999999994 -0.342125 -0.64c-0.17475000000000002 -0.174875 -0.3975 -0.293875 -0.64 -0.342125 -0.2425 -0.04825 -0.493875 -0.0235 -0.72225 0.071125 -0.228375 0.094625 -0.423625 0.254875 -0.5609999999999999 0.46037500000000003 -0.137375 0.205625 -0.210625 0.44725000000000004 -0.210625 0.6945 0 0.3315 0.13174999999999998 0.6495 0.366125 0.883875S14.6685 18.75 15 18.75Zm8.75 -15h-1.25V2.5c0 -0.331525 -0.13174999999999998 -0.6494624999999999 -0.366125 -0.8838875C21.8995 1.3817 21.5815 1.25 21.25 1.25c-0.3315 0 -0.6495 0.13169999999999998 -0.883875 0.36611249999999995C20.13175 1.8505375 20 2.168475 20 2.5v1.25H10V2.5c0 -0.331525 -0.13169999999999998 -0.6494624999999999 -0.36611249999999995 -0.8838875C9.3994625 1.3817 9.081525000000001 1.25 8.75 1.25s-0.6494624999999999 0.13169999999999998 -0.8838875 0.36611249999999995C7.6317 1.8505375 7.5 2.168475 7.5 2.5v1.25H6.25c-0.9945625 0 -1.9483875 0.39508750000000004 -2.65165 1.09835C2.8950875 5.551612500000001 2.5 6.505437499999999 2.5 7.5v17.5c0 0.9944999999999999 0.39508750000000004 1.948375 1.09835 2.651625C4.3016125 28.354875 5.255437499999999 28.75 6.25 28.75h17.5c0.9944999999999999 0 1.948375 -0.395125 2.651625 -1.098375C27.104875 26.948375000000002 27.5 25.994500000000002 27.5 25V7.5c0 -0.9945625 -0.395125 -1.9483875 -1.098375 -2.65165C25.698375000000002 4.1450875 24.744500000000002 3.75 23.75 3.75Zm1.25 21.25c0 0.3315 -0.13174999999999998 0.6495 -0.366125 0.883875S24.0815 26.25 23.75 26.25H6.25c-0.331525 0 -0.6494624999999999 -0.13174999999999998 -0.8838875 -0.366125C5.1317 25.6495 5 25.3315 5 25v-11.25h20v11.25Zm0 -13.75H5V7.5c0 -0.331525 0.13169999999999998 -0.6494624999999999 0.36611249999999995 -0.8838875C5.6005375 6.3817 5.918475 6.25 6.25 6.25h1.25v1.25c0 0.331525 0.13169999999999998 0.6494624999999999 0.36611249999999995 0.8838875C8.1005375 8.6183 8.418474999999999 8.75 8.75 8.75s0.6494624999999999 -0.13169999999999998 0.8838875 -0.36611249999999995C9.8683 8.1494625 10 7.831525 10 7.5V6.25h10v1.25c0 0.331525 0.13174999999999998 0.6494624999999999 0.366125 0.8838875C20.6005 8.6183 20.9185 8.75 21.25 8.75c0.3315 0 0.6495 -0.13169999999999998 0.883875 -0.36611249999999995C22.36825 8.1494625 22.5 7.831525 22.5 7.5V6.25h1.25c0.3315 0 0.6495 0.13169999999999998 0.883875 0.36611249999999995C24.86825 6.8505375 25 7.168475 25 7.5v3.75ZM8.75 18.75c0.24722500000000003 0 0.4889 -0.07325 0.6944625 -0.210625 0.2055625 -0.137375 0.36577499999999996 -0.332625 0.46038750000000006 -0.5609999999999999 0.09461249999999999 -0.228375 0.11936250000000001 -0.47974999999999995 0.0711375 -0.72225 -0.0482375 -0.2425 -0.1672875 -0.46524999999999994 -0.34209999999999996 -0.64 -0.174825 -0.174875 -0.39754999999999996 -0.293875 -0.6400250000000001 -0.342125 -0.24247500000000002 -0.04825 -0.4938125 -0.0235 -0.7222125 0.071125 -0.22841250000000002 0.094625 -0.4236375 0.254875 -0.5609875 0.46037500000000003C7.5733125 17.011125 7.5 17.25275 7.5 17.5c0 0.3315 0.13169999999999998 0.6495 0.36611249999999995 0.883875C8.1005375 18.61825 8.418474999999999 18.75 8.75 18.75Zm0 5c0.24722500000000003 0 0.4889 -0.07325 0.6944625 -0.210625 0.2055625 -0.137375 0.36577499999999996 -0.332625 0.46038750000000006 -0.5609999999999999 0.09461249999999999 -0.228375 0.11936250000000001 -0.47974999999999995 0.0711375 -0.72225 -0.0482375 -0.2425 -0.1672875 -0.46524999999999994 -0.34209999999999996 -0.64 -0.174825 -0.174875 -0.39754999999999996 -0.293875 -0.6400250000000001 -0.342125 -0.24247500000000002 -0.04825 -0.4938125 -0.0235 -0.7222125 0.071125 -0.22841250000000002 0.094625 -0.4236375 0.254875 -0.5609875 0.46037500000000003C7.5733125 22.011125 7.5 22.25275 7.5 22.5c0 0.3315 0.13169999999999998 0.6495 0.36611249999999995 0.883875C8.1005375 23.61825 8.418474999999999 23.75 8.75 23.75Z" stroke-width="1.25"></path>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Planning & Deadlines</h4>
+                    <p>Calendrier mensuel avec tes échéances. Code couleur urgence (J-7, J-3, J-1) et rappels automatiques par mail.</p>
                 </div>
-                <div class="card">
+                <div class="card-pres">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp5" xmlns="http://www.w3.org/2000/svg" viewBox="-1.25 -1.25 30 30" fill="none" stroke="#10c97e" stroke-linecap="round" stroke-linejoin="round" id="Target--Streamline-Tabler" height="30" width="30">
+                            <path d="M12.604166666666666 13.75a1.1458333333333333 1.1458333333333333 0 1 0 2.2916666666666665 0 1.1458333333333333 1.1458333333333333 0 1 0 -2.2916666666666665 0" stroke-width="2.5"></path>
+                            <path d="M8.020833333333332 13.75a5.729166666666666 5.729166666666666 0 1 0 11.458333333333332 0 5.729166666666666 5.729166666666666 0 1 0 -11.458333333333332 0" stroke-width="2.5"></path>
+                            <path d="M3.4375 13.75a10.3125 10.3125 0 1 0 20.625 0 10.3125 10.3125 0 1 0 -20.625 0" stroke-width="2.5"></path>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Objectifs personnels</h4>
+                    <p>Tech, sport, culture… définis des objectifs catégorisés avec des étapes à cocher et un suivi de progression visuel</p>
                 </div>
-                <div class="card">
+                <div class="card-pres card-pres-secondary">
                     <div>
-                        <!-- TODO RAJOUTER UNE BOULE DE COULEUR -->
-                        <img src=" {{ asset('images/icons/empty/dashboard.svg.svg') }} " alt="#"/>
+                        <svg class="icon-presentation icp6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" id="Bell-Notification--Streamline-Sharp" height="30" width="30">
+                            <g id="bell-notification--alert-bell-ring-notification-alarm">
+                                <path id="Vector 2344" stroke="#ffffff" d="M6.25 11.25v6.25l-2.5 5h22.5l-2.5 -5V11.25A8.75 8.75 0 1 0 6.25 11.25Z" stroke-width="1.5"></path>
+                                <path id="Vector 2345" stroke="#ffffff" d="M12.5 27.5h5" stroke-width="1.5"></path>
+                            </g>
+                        </svg>
                     </div>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Rappels automatiques</h4>
+                    <p>Reçois automatiquement un e-mail à J-7, J-3 et J-1 avant chaque deadline. Plus aucune surprise.</p>
                 </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+
+        <div class="part p3" id="howto">
+            <br><br><br><br><br><br>
+            <h2>En place en 3 minutes</h2>
+            <p class="text-muted">Pas de configuration complexe. Commence à organiser dès la première connexion.</p>
+            <div class="num-presentation">
+                <div class="num-card">
+                    <p class="np">01</p><br>
+                    <h4>Crée ton compte</h4>
+                    <p class="text-muted">Inscription en 30 secondes, aucune carte requise.</p>
+                </div>
+                <div class="num-card">
+                    <p class="np">02</p><br>
+                    <h4>Ajoute tes matières</h4>
+                    <p class="text-muted">Importe tes cours et définis les notions à maîtriser.</p>
+                </div>
+                <div class="num-card">
+                    <p class="np">03</p><br>
+                    <h4>Centralise tout</h4>
+                    <p class="text-muted">Projets, deadlines, objectifs, tout au même endroit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="part pf">
+            <div class="card-log">
+                <img src="{{ asset('images/Commit-Logo.png') }}" alt="COMMIT Logo" class="logo">
+                <h2>Prêt à commencer ?</h2>
+                <p>Crée ton compte en 30 secondes et organise ta scolarité dès aujourd'hui.</p>
+                <a href="{{ route('register') }}" class="btn-sign">Créer mon compte maintenant <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>

@@ -18,17 +18,21 @@
 
                 <div class="navbar-center">
                     <ul>
-                        <li><a href="#">Fonctionnalités</a></li>
-                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#fonctionalites">Fonctionnalités</a></li>
+                        <li><a href="#howto">Comment ça marche</a></li>
+                        <!--
+                        TODO rajouter les navlinks plutard
                         <li><a href="#">À propos</a></li>
                         <li><a href="#">FAQ</a></li>
-                        <button class="btntoggle-darkmode" id="theme-switch"><i class="bi bi-brightness-low-fill"></i></button>
+
+                        -->
+                        <!--TODO -FIN BOUTON POUR DAYLIGHT MODE <button class="btntoggle-darkmode" id="theme-switch"><i class="bi bi-brightness-low-fill"></i></button> -->
                     </ul>
                 </div>
 
                 <div class="navbar-right">
-                    <button class="btn-log">Se connecter</button>
-                    <button class="btn-sign">Commencer<i class="bi bi-arrow-up-right"></i></button>
+                    <a href="{{ route('login') }}" class="btn-log">Se connecter</a>
+                    <a href="{{ route('register') }}" class="btn-sign">Commencer<i class="bi bi-arrow-up-right"></i></a>
                 </div>
         </nav>
     </header>
@@ -37,8 +41,19 @@
         @yield('main')
     </main>
 
-    <footer class="footer">
-        <p><img src="{{ asset('images/Commit-Logo.png') }}" alt="COMMIT Logo" class="logosmall">&copy; 2026 COMMIT. All rights reserved.</p>
+    <footer>
+        <div class="footer">
+            <div class="footer-left">
+                <img src="{{ asset('images/Commit-Logo.png') }}" alt="COMMIT Logo" class="logosmall">
+                <p>COMMIT</p>
+            </div>
+            <div class="footer-center">
+                <p>&copy;2026 Tout droits réservés.</p>
+            </div>
+            <div class="footer-right">
+                <p>Conçu pour les étudiants</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
