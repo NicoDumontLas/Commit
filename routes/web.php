@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -16,17 +18,50 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
+//ROUTE UNE FOIS LOG
 
-//post route example
-Route::post("/formsubmitted", function (Request $request) {
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth')->name('dashboard');
 
-    $request->validate([
-        'name' => 'required|min:3|max:30',
-        'email' => 'required|email|min:3|max:30',
-    ]);
+Route::get('/matieres', function () {
+    return view('subjects.index');
+})->middleware('auth')->name('subjects');
 
-    $name = $request->input("name");
-    $email = $request->input("email");
+Route::get('/projets', function () {
+    return view('projects.index');
+})->middleware('auth')->name('projects');
 
-    return "Your name is : {$request->input("name")} , and email is : $email";
-})->name('formsubmitted');
+Route::get('/planning', function () {
+    return view('planning.index');
+})->middleware('auth')->name('planning');
+
+Route::get('/objectifs', function () {
+    return view('goals.index');
+})->middleware('auth')->name('goals');
+
+Route::get('/parametres', function () {
+    return view('settings.index');
+})->middleware('auth')->name('settings');
+
+Route::get('/profile', function () {
+    return view('profile.edit');
+})->middleware('auth')->name('profile');
+
+//Post route
+
+Route::post('logout', function(){
+    Auth::guard('web')->logout();
+
+    Session::invalidate();
+    Session::regenerateToken();
+
+    return redirect('/');
+})->name('logout');
+
+Route::post('login', LoginController::class)
+    ->middleware('throttle:5,1')//times by minutes per ip
+    ->name('login.attempt');
+
+
+Route::post('register', RegisterController::class) ->name('register.store');

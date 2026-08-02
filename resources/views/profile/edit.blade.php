@@ -2,11 +2,7 @@
 @extends('layouts.main')
 
 @section('title')
-    Planning
-@endsection
-
-@section('requestPath')
-    Planning
+    Parametres
 @endsection
 
 @section('main')

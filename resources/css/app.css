@@ -14,6 +14,7 @@
     --color-bg-dark: hsl(225 35% 7%);
     --color-bg: hsl(224 31% 10%);
     --color-bg-light: hsl(225 30% 13%);
+    --color-bg-active: #151c3e;
     --color-border: hsl(222 18% 35%);
 
     --glow-primary: hsl(247 100% 71% / 0.14);
@@ -26,6 +27,7 @@
     --color-secondary: hsl(248 100% 78%);
 
     --color-danger: hsl(350 89% 60%);
+    --color-bg-danger: #3A1C2D;
     --color-warning: hsl(37 91% 55%);
     --color-succes: hsl(156 85% 43%);
     --color-info: hsl(189 94% 43%);
@@ -35,6 +37,7 @@
     --color-bg-dark: hsl(225 20% 90%);
     --color-bg: hsl(225 25% 95%);
     --color-bg-light: hsl(225 30% 99%);
+    --color-bg-active: #151c3e;
     --color-border: hsl(222 15% 70%);
 
     --glow-primary: hsl(247 70% 60% / 0.07);
@@ -394,6 +397,253 @@ a{
 }
 
 /*=================================
+        MAIN CONTENT
+==================================*/
+.app-layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+.app-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* évite les débordements si le contenu est large */
+}
+
+
+.main{
+    display: flex;
+    min-height: 100vh;
+}
+.main-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+/*=================================
+        MAIN NAVBAR
+==================================*/
+
+.sid-top{
+    padding: 10px 0 10px 0;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.top-logo{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 8px;
+    justify-self: start;
+}
+
+.top-btn{
+    justify-self: end;
+    padding-right: 10px;
+}
+
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-right: 1px solid var(--color-border);
+    min-height: 100vh;
+    background: var(--color-bg);
+    flex-shrink: 0;
+}
+
+.sid-mid{
+    padding-top: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+
+.sid-mid ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sid-mid ul li a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    padding: 10px 1em;
+    border-radius: 15px;
+    width: 100%;
+}
+
+
+.dashboard, .subjects , .projects{
+    color: var(--color-text-muted);
+    svg path{
+        stroke: var(--color-text-muted);
+    }
+}
+
+.dashboard:hover, .subjects:hover , .projects:hover{
+    background: var(--color-bg-light);
+    color: var(--color-text);
+    svg path{
+        stroke: var(--color-text);
+    }
+}
+
+.dashboard.active, .subjects.active , .projects.active{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg path{
+        stroke: var(--color-secondary);
+    }
+}
+.dashboard.active:hover, .subjects.active:hover , .projects.active:hover{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg path{
+        stroke: var(--color-secondary);
+    }
+}
+
+.planning,.goals{
+    color: var(--color-text-muted);
+    svg path{
+        fill: var(--color-text-muted);
+    }
+}
+
+.planning:hover,.goals:hover{
+    background: var(--color-bg-light);
+    color: var(--color-text);
+    svg path{
+        fill: var(--color-text);
+    }
+}
+
+.planning.active,.goals.active{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg path{
+        fill: var(--color-secondary);
+    }
+}
+.planning.active:hover,.goals.active:hover{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg path{
+        fill: var(--color-secondary);
+    }
+}
+
+/*   TODO : RAJOUTER UNE BORDURE AUX ICONS UNE FOIS LA SIDEBARFINIS   */
+
+.sid-bottom{
+    border-top: 1px solid var(--color-border);
+}
+
+.sid-bottom ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 170px;
+}
+
+.sid-bottom ul li a, .sid-bottom ul li form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    padding: 10px 1em;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.settings{
+    color: var(--color-text-muted);
+    svg g{
+        stroke: var(--color-text-muted);
+    }
+}
+
+.settings:hover{
+    background: var(--color-bg-light);
+    color: var(--color-text);
+    svg g{
+        stroke: var(--color-text);
+    }
+}
+
+.settings.active{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg g{
+        stroke: var(--color-secondary);
+    }
+}
+.settings.active:hover{
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    svg g{
+        stroke: var(--color-secondary);
+    }
+}
+
+.logout button{
+    color: var(--color-text-muted);
+    svg path{
+        fill: var(--color-text-muted);
+    }
+}
+
+.logout:hover{
+    background: var(--color-bg-danger);
+    button {
+        span {
+            color: var(--color-danger);
+        }
+        svg path{
+            fill: var(--color-danger);
+        }
+    }
+}
+
+.btn-not{ /* GENERER PAR CLAUDE*/
+    /* Supprime tout le style natif du navigateur */
+    all: unset;
+
+    /* Remet les bases essentielles pour un bouton fonctionnel */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    /* Neutralise les comportements spécifiques aux boutons */
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: normal;
+}
+
+/*=================================
         CARD LOGIN
 ==================================*/
 
@@ -441,7 +691,7 @@ a{
 }
 
 .card-pres-secondary{
-    background: #151c3e;
+    background: var(--color-bg-active);
     color: var(--color-secondary);
 }
 
@@ -493,7 +743,7 @@ a{
 .np{
     align-content: center;
     margin: 10px auto;
-    background: #151C3E;
+    background: var(--color-bg-active);
     padding: 10px;
     border: 1px solid var(--color-border);
     border-radius: 9px;
@@ -501,6 +751,57 @@ a{
     height: 30px;
 }
 
+
+.notification{
+    background: var(--color-bg-light);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+/*=========================
+        TOPBAR
+==========================*/
+
+.topbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.topb-left{
+    padding-bottom: 1px;
+    justify-self: start;
+    display: flex;
+}
+
+.topb-left span{
+    padding-left: 5px;
+    color: var(--color-text);
+}
+
+
+.topb-right{
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.userinfos a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.userinfos a span{
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-active);
+    color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 10px;
+}
 
 /*=========================
         NAVBAR Home
@@ -614,6 +915,10 @@ h2{
 /*===========================
         MISCELANIOUS
 ===========================*/
+.hidden{
+    display: none;
+}
+
 
 .titre-centre{
     display: flex;
@@ -737,5 +1042,3 @@ h2{
 .footer-right{
     justify-self: end;
 }
-
-
