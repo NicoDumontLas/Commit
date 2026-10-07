@@ -484,7 +484,7 @@ a{
 .main-nav{
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 190px;
     border-right: 1px solid var(--color-border);
     min-height: 100vh;
     background: var(--color-bg);
@@ -1158,9 +1158,8 @@ input[type="radio"] {
 .subj-input-icon{
     padding: 8px;
     display: flex;
-    flex-direction: column;
     gap: 30px;
-    margin-bottom: 50px;
+    overflow-wrap: anywhere;
 }
 
 .subj-input-icon-top{
@@ -1181,6 +1180,11 @@ input[type="radio"] {
     width: 80px;
 }
 
+#spanname{
+    color: var(--color-text-muted);
+    margin-right: 5px;
+}
+
 .subj-input-info input{
     display: flex;
     background: var(--color-bg-dark);
@@ -1195,10 +1199,11 @@ input[type="radio"] {
 }
 
 .subj-content-mid-create{
+    overflow-wrap: break-word;
     width: 90%;
     margin: 3em auto;
     border: 1px solid var(--color-border);
-    height: 63vh;
+    height: 63%;
     background: var(--color-bg);
     border-radius: 20px;
     padding: 30px;
@@ -1269,6 +1274,231 @@ input[type="radio"] {
 .c15 {
     background: #D4AF37;
 }
+
+/*===========================
+         SECTION
+===========================*/
+.sum-sect-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sum-sect-left{
+    display: flex;
+    justify-self: start;
+}
+
+.sum-sect-right{
+    display: flex;
+    justify-self: end;
+}
+
+
+.section-layout{
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sect-top{
+    margin-top: 30px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+}
+
+.sect-top-left a{
+    color: var(--color-text-muted);
+    justify-self: start;
+}
+
+.sect-top-right{
+    justify-self: end;
+}
+
+.sect-subj-info{
+    margin-top: 40px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    display: flex;
+    border-radius: 30px;
+}
+
+.sect-subj-left{
+    justify-self: start;
+    padding: 3em 50px;
+}
+
+.sect-subj-right-top{
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+.subject-info-colorbar{
+    border: 1px solid var(--color-border);
+    font-size: 150px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.sect-show-content{
+    margin-top: 50px;
+}
+
+.sections{
+    margin-top: 30px;
+}
+
+.sect-show-top{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sect-show-left{
+    justify-self: start;
+    color: var(--color-text-muted);
+}
+
+.sect-show-right{
+    justify-self: end;
+}
+
+.sectiondiv{
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    justify-content: start;
+    background: var(--color-bg);
+    margin: 1em auto;
+
+}
+
+.section-info{
+    padding: 20px 35px;
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sct-info-left{
+    display: flex;
+    justify-self: start;
+}
+
+.sct-info-left div{
+    padding-left: 15px;
+}
+
+.sct-info-left div p{
+    color: var(--color-text-muted);
+}
+
+.sct-info-right{
+    display: flex;
+    justify-self: end;
+}
+
+.sct-info-right1 a{
+    color: var(--color-secondary);
+    padding-right: 15px;
+}
+
+.sct-info-right2{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-status{
+    padding: 0 5px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+}
+
+.sectiondiv summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.sectiondiv summary::-webkit-details-marker {
+    display: none;
+}
+
+.sum-sect-left::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.15s ease;
+}
+
+.sectiondiv[open] .sum-sect-left::before {
+    transform: rotate(90deg);
+}
+/*===========================
+           NOTIONS
+===========================*/
+
+.notions-create-layout{
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.notions-create-top{
+    margin-top: 30px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.notions-create-form{
+    border: 1px solid var(--color-border);
+    margin: 5em auto;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notions-create-form h3 {
+    padding-bottom: 25px;
+}
+
+.notions-create-label{
+    display: flex;
+    padding: 10px;
+}
+
+.notions-create-input{
+    margin-left: 20px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-dark);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--color-text);
+}
+
+
 /*===========================
            FOOTER
 ===========================*/

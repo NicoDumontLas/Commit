@@ -2,13 +2,13 @@
 @extends('layouts.main')
 
 @section('title')
-    Projets
+    Matières & Notions
 @endsection
 
 @section('requestPath')
-    Projets
+    Matières & Notions
 @endsection
 
 @section('main')
-
+    <p>bonjours</p>
 @endsection

@@ -25,7 +25,7 @@
         <div class="subj-content-mid">
             @foreach($subjects as $subject)
                     <div class="subject">
-                        <a class="subj-overlay" href="{{ route('notions', $subject->id) }}"></a>
+                        <a class="subj-overlay" href="{{ route('subjects.show', $subject->id) }}"></a>
                         <div class="subject-infos">
                             <span
                                 class="subject-colorbar"

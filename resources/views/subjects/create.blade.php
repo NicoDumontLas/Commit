@@ -73,74 +73,70 @@
 
                 <h3>Icons</h3>
                 <div class="subj-input-icon">
-                    <div class="subj-input-icon-top">
-                        <label for="i1">
-                            <input type="radio" id="i1" name="icon_path" value="algorithm">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/algorithm.png')}}" />
-                        </label>
-                        <label for="i2">
-                            <input type="radio" id="i2" name="icon_path" value="calculator">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/calculator.png')}}" />
-                        </label>
-                        <label for="i3">
-                            <input type="radio" id="i3" name="icon_path" value="coding">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/coding.png')}}" />
-                        </label>
-                        <label for="i4">
-                            <input type="radio" id="i4" name="icon_path" value="compliant">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/compliant.png')}}" />
-                        </label>
-                        <label for="i5">
-                            <input type="radio" id="i5" name="icon_path" value="cyber-attack">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/cyber-attack.png')}}" />
-                        </label>
-                        <label for="i6">
-                            <input type="radio" id="i6" name="icon_path" value="database-file">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/database-file.png')}}" />
-                        </label>
-                        <label for="i7">
-                            <input type="radio" id="i7" name="icon_path" value="economic">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/economic.png')}}" />
-                        </label>
-                        <label for="i8">
-                            <input type="radio" id="i8" name="icon_path" value="eng">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/eng.png')}}" />
-                        </label>
-                    </div>
-                    <div class="subj-input-icon-btm">
-                        <label for="i9">
-                            <input type="radio" id="i9" name="icon_path" value="lesson">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/lesson.png')}}" />
-                        </label>
-                        <label for="i10">
-                            <input type="radio" id="i10" name="icon_path" value="local-area-network">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/local-area-network.png')}}" />
-                        </label>
-                        <label for="i11">
-                            <input type="radio" id="i11" name="icon_path" value="networking">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/networking.png')}}" />
-                        </label>
-                        <label for="i12">
-                            <input type="radio" id="i12" name="icon_path" value="online-lesson">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/online-lesson.png')}}" />
-                        </label>
-                        <label for="i13">
-                            <input type="radio" id="i13" name="icon_path" value="protected">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/protected.png')}}" />
-                        </label>
-                        <label for="i14">
-                            <input type="radio" id="i14" name="icon_path" value="stamp">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/stamp.png')}}" />
-                        </label>
-                        <label for="i15">
-                            <input type="radio" id="i15" name="icon_path" value="system">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/system.png')}}" />
-                        </label>
-                        <label for="i16">
-                            <input type="radio" id="i16" name="icon_path" value="tools">
-                            <img class="isubj" src="{{ asset('images/subjects/icons/tools.png')}}" />
-                        </label>
-                    </div>
+                    <label for="i1">
+                        <input type="radio" id="i1" name="icon_path" value="algorithm">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/algorithm.png')}}" />
+                    </label>
+                    <label for="i2">
+                        <input type="radio" id="i2" name="icon_path" value="calculator">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/calculator.png')}}" />
+                    </label>
+                    <label for="i3">
+                        <input type="radio" id="i3" name="icon_path" value="coding">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/coding.png')}}" />
+                    </label>
+                    <label for="i4">
+                        <input type="radio" id="i4" name="icon_path" value="compliant">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/compliant.png')}}" />
+                    </label>
+                    <label for="i5">
+                        <input type="radio" id="i5" name="icon_path" value="cyber-attack">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/cyber-attack.png')}}" />
+                    </label>
+                    <label for="i6">
+                        <input type="radio" id="i6" name="icon_path" value="database-file">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/database-file.png')}}" />
+                    </label>
+                    <label for="i7">
+                        <input type="radio" id="i7" name="icon_path" value="economic">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/economic.png')}}" />
+                    </label>
+                    <label for="i8">
+                        <input type="radio" id="i8" name="icon_path" value="eng">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/eng.png')}}" />
+                    </label>
+                    <label for="i9">
+                        <input type="radio" id="i9" name="icon_path" value="lesson">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/lesson.png')}}" />
+                    </label>
+                    <label for="i10">
+                        <input type="radio" id="i10" name="icon_path" value="local-area-network">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/local-area-network.png')}}" />
+                    </label>
+                    <label for="i11">
+                        <input type="radio" id="i11" name="icon_path" value="networking">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/networking.png')}}" />
+                    </label>
+                    <label for="i12">
+                        <input type="radio" id="i12" name="icon_path" value="online-lesson">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/online-lesson.png')}}" />
+                    </label>
+                    <label for="i13">
+                        <input type="radio" id="i13" name="icon_path" value="protected">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/protected.png')}}" />
+                    </label>
+                    <label for="i14">
+                        <input type="radio" id="i14" name="icon_path" value="stamp">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/stamp.png')}}" />
+                    </label>
+                    <label for="i15">
+                        <input type="radio" id="i15" name="icon_path" value="system">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/system.png')}}" />
+                    </label>
+                    <label for="i16">
+                        <input type="radio" id="i16" name="icon_path" value="tools">
+                        <img class="isubj" src="{{ asset('images/subjects/icons/tools.png')}}" />
+                    </label>
                 </div>
                 <div class="subj-input-btns">
                     <a class="btn-log" href="{{ url()->previous() }}">retour</a>

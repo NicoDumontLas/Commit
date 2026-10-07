@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Section;
 use App\Models\Subject;
 use Illuminate\Http\Request;
 
@@ -43,9 +44,12 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Subject $subject)
+    public function show($id)
     {
-        //
+        $subject = Subject::with('sections.notions')->findOrFail($id);
+        $sections = $subject->sections;
+        $notions = $sections->flatMap->notions;
+        return view('subjects.show', compact('subject', 'sections', 'notions'));
     }
 
     /**

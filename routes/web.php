@@ -1,7 +1,12 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NotionController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SectionController;
+use App\Http\Controllers\SubjectNotionController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubjectController;
 use Illuminate\Http\Request;
@@ -64,14 +69,14 @@ Route::post('login', LoginController::class)
 Route::post('register', RegisterController::class) ->name('register.store');
 
 
-Route::get('/notions', function () {
-    return view('subjects.notions.index');
-})->middleware('auth')->name('notions');
+
 
 //ROUTE RESSOURCES TODO : AJOUTER LES NOTIONS ET AUTRES TABLES DE LA BDD
 
 Route::middleware('auth')->group(function () {
-    Route::resource('matières', SubjectController::class)
-        ->parameters(['matières' => 'subject'])
-        ->names('subjects');
+    Route::resource('subjects', SubjectController::class);
+    Route::resource('sections', SectionController::class);
+    Route::resource('subjects.notions', NotionController::class);
+    Route::resource('projects', ProjectController::class);
+    Route::resource('projects.tasks', TaskController::class);
 });

@@ -13,4 +13,8 @@ class Subject extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
+    }
 }
